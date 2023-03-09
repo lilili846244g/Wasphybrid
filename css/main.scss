@@ -1,0 +1,86 @@
+@use "fontsize.scss" as f;
+@use "color.scss" as c;
+@import "base.scss";
+@import "mixin.scss";
+
+/* @import "rwd.scss"; */
+
+@import "header.scss";
+@import "carmove.scss";
+.hero {
+  width: 100%;
+  max-height: 100vh;
+  img {
+    height: 100vh !important;
+  }
+}
+
+.card-section {
+  height: auto;
+  background-color: rgb(197, 193, 193);
+  .card-move {
+    width: 100%;
+    height: auto;
+    border: 1px solid red;
+    padding: 1rem;
+    @include d-flex(center, center);
+    .icon {
+      width: 100%;
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.img-section {
+  width: 100%;
+  height: auto;
+  margin-top: 80px;
+  .img-1 {
+    width: 100%;
+    img {
+      width: 100%;
+      height: 30vh;
+    }
+  }
+  .section-heading {
+    width: 100%;
+  }
+}
+
+.car-section {
+  width: 100%;
+  .car-move {
+    @extend .car-move;
+  }
+}
+
+.other-section {
+  width: 100%;
+  .section-heading {
+    @extend .section-heading;
+  }
+  .box-1 {
+    width: 100%;
+    height: 30vh;
+    border: 1px solid red;
+  }
+  .box-2 {
+    @extend .box-1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    .box {
+      width: 100%;
+      height: 50%;
+      border: 1px solid red;
+    }
+  }
+}
+
+footer {
+  width: 100%;
+  height: 40vh;
+  border: 1px solid red;
+}

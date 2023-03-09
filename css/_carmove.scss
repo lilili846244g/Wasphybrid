@@ -1,0 +1,44 @@
+@use "color.scss" as c;
+@use "fontsize.scss" as f;
+.car-move {
+  width: 100%;
+  height: 300px;
+  .icon {
+    width: 100%;
+    height: 70%;
+    position: relative;
+    .new__tag {
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: c.$maincolor;
+      font-size: f.$xs;
+      padding: 0.25rem 0.5rem;
+      border-radius: 0.25rem;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .car-dtl {
+    padding: 1rem 0.5rem;
+    .model {
+      text-transform: uppercase;
+    }
+    .prices {
+      display: inline-flex;
+      align-items: center;
+      column-gap: 0.5rem;
+      .new_price {
+        font-size: f.$md;
+        font-weight: f.$fsb;
+      }
+      .new__discount {
+        font-size: f.$xs;
+        text-decoration: line-through;
+        font-weight: f.$fl;
+      }
+    }
+  }
+}
