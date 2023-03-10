@@ -1,0 +1,62 @@
+@use "color.scss" as c;
+@import "mixin.scss";
+footer {
+  background-color: c.$footer;
+  .footer {
+    border: 1px solid #fff;
+    h4 {
+      @include footer-h4;
+    }
+    ul {
+      list-style: none;
+      li {
+        margin-bottom: 10px;
+        .icon {
+          width: 23px !important;
+          box-shadow: none;
+          border: none;
+          margin-right: 14px;
+        }
+        a {
+          @include footer-text;
+          &:hover {
+            color: c.$maincolor;
+          }
+        }
+        .img-4 {
+          width: 200px !important;
+          margin-bottom: 2rem;
+          padding: 10px;
+          border-radius: 5px;
+          margin-right: 50px;
+          @media (min-width: 100px) and (max-width: 565px) {
+            width: 100% !important;
+          }
+        }
+      }
+    }
+  }
+  .box-2 {
+    .col-6 {
+      opacity: 0.5;
+    }
+  }
+  .box-4 {
+    float: right;
+    @media (min-width: 566px) and (max-width: 1282px) {
+      margin: 0 !important;
+      float: none !important;
+    }
+    @media (min-width: 100px) and (max-width: 565px) {
+      margin-left: -24px !important;
+      float: left !important;
+    }
+  }
+  .box-1,
+  .box-2,
+  .box-3 {
+    @media (min-width: 100px) and (max-width: 565px) {
+      margin-left: -24px;
+    }
+  }
+}
